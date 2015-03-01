@@ -32,7 +32,7 @@ def sum_primes_to_n(n):
 def sum_primes_better_sieve(n): # not really
     sieve = [True]*n
     def mark(sieve, x):
-        for i in xrange(x*2, n, x):
+        for i in xrange(x*x, n, x):
             sieve[i] = False
     mark(sieve,2)
     for x in xrange(3, int(n**0.5)+1,2):
