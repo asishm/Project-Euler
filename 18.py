@@ -34,16 +34,16 @@ M = '''75
 91 71 52 38 17 14 91 43 58 50 27 29 48
 63 66 04 68 89 53 67 30 73 16 69 87 40 31
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23'''.split('\n')
-M = [map(int, c.split()) for c in M]
+M = [list(map(int, c.split())) for c in M]
 
 for i,c in enumerate(M):
     if i == 0:
         continue
-    for j in xrange(len(c)):
+    for j in range(len(c)):
         if j == 0:
             M[i][j] += M[i-1][j]
         elif j == len(c)-1:
             M[i][j] += M[i-1][j-1]
         else:
             M[i][j] += max(M[i-1][j], M[i-1][j-1])
-print max(M[-1])
+print(max(M[-1]))

@@ -1,6 +1,6 @@
 '''What is the sum of the digits of the number 2^1000?'''
 
-print sum(map(int, str(2**1000)))
+print(sum(map(int, str(2**1000))))
 
 # pretty cute
 # assume python couldn't handle big numbers
@@ -8,6 +8,7 @@ print sum(map(int, str(2**1000)))
 # number of digits in 2**1000 ~ 1000*log(2) base 10 ~ 300
 
 from math import log
+from time import sleep
 
 def calculate(base=2, POW=1000):
 
@@ -21,18 +22,19 @@ def calculate(base=2, POW=1000):
 
     while power < POW:
         carry = 0
-        for j in xrange(index):
+        for j in range(index):
             value[j] = value[j]*base + carry
-            carry = value[j]/10
+            carry = value[j]//10
             value[j] %= 10
         if carry:
             value[index] = carry
             index += 1
-        #print ''.join(str(_) for _ in value[:index][::-1]),
+        #print(''.join(str(_) for _ in value[:index][::-1]),'\n')
+        #sleep(2)
         power += 1
     return value, index
 
-print sum(calculate()[0])
+print(sum(calculate()[0]))
 # to print 2**1000
 # val, ind = calculate(2,1000)
 # print ''.join(str(_) for _ in val[:ind][::-1])

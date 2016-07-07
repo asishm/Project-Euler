@@ -50,8 +50,8 @@ N = ''.join('''73167176531330624919225119674426574742355349194934
 84580156166097919133875499200524063689912560717606
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450'''.split())
-
-for c in xrange(len(N)-13):
-    p = reduce(lambda x,y : int(x)*int(y), N[c:c+13])
+import functools
+for c in range(len(N)-13):
+    p = functools.reduce(lambda x,y : int(x)*int(y), N[c:c+13])
     if p > p_max: p_max = p
-print p_max
+print(p_max)

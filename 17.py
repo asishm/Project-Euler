@@ -13,10 +13,10 @@ tens = {1:3, 2:6, 3:6, 4:5, 5:5, 6:5, 7:7, 8:6, 9:6}
 
 s = 0
 
-for n in xrange(1000):
+for n in range(1000):
     unit = n%10
-    ten = (n/10)%10
-    hundred = n/100
+    ten = (n//10)%10
+    hundred = n//100
     if hundred:
         if not (ten or unit):
             s += units[hundred]+7
@@ -34,4 +34,4 @@ for n in xrange(1000):
         s += tens[ten]+units[unit]
 s += 11
 
-print s
+print(s)

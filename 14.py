@@ -15,7 +15,7 @@ n = 1
 
 generated = {1:1, 2:2}
 start, chain = 1,1
-for s in xrange(3,1000000):
+for s in range(3,1000000):
     c = 0
     g = []                         # terrible variable names, i know
     n = s
@@ -33,5 +33,5 @@ for s in xrange(3,1000000):
         chain = d + c
         start = s
     
-print (time.time() - st)
-print start
+print(time.time() - st)
+print(start)

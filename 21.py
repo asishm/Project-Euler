@@ -12,10 +12,10 @@ def sum_divisors(n):
         if div >= n:
             break
         if n%div == 0:
-            if n/div == div:
+            if n//div == div:
                 s += div
             else:
-                s += div + n/div
+                s += div + n//div
         div += 1
     return s+1
 
@@ -26,8 +26,8 @@ def is_amicable(n):
 
 s = 0
 amicable_list = []
-for n in xrange(2,10000):
+for n in range(2,10000):
     if is_amicable(n):
         s += n
         amicable_list.append(n)
-print s
+print(s)

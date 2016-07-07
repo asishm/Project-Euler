@@ -7,5 +7,5 @@ while max(a,b)<=4*1E6:   # constraint
     b,a=a+b,b            # generate next fib number (b)
     if b%2==0:
         s += b
-print s
+print(s)
 

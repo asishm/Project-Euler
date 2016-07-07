@@ -16,3 +16,4 @@ def get_nth_prime(n):
         num += 2
     return primes[n-1]
 
+print(get_nth_prime(10001))

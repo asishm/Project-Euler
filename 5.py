@@ -2,4 +2,5 @@
 divisible by all of the numbers from 1 to 20?'''
 
 from fractions import gcd
-print reduce(lambda x,y: x*y/gcd(x,y), xrange(1,21))
+import functools
+print(functools.reduce(lambda x,y: x*y/gcd(x,y), range(1,21)))

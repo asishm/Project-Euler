@@ -6,6 +6,7 @@ obtain a name score.
 What is the total of all the name scores in the file?'''
 
 import os.path
+import functools
 
 def p22():
 
@@ -17,15 +18,14 @@ def p22():
     s = 0
 
     for i, name in enumerate(names):
-        name_score = reduce(int.__add__,map(lambda x: ord(x)-ord('A')+1, name)
-                            )*(i+1)
+        name_score = functools.reduce(int.__add__,map(lambda x: ord(x)-ord('A')+1, name))*(i+1)
         s += name_score
 
-    print s
+    print(s)
 
 
 import time
 s = time.clock()
 p22()
-print time.clock() - s
+print(time.clock() - s)
 

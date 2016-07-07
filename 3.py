@@ -1,6 +1,8 @@
 '''What is the largest prime factor of the number 600851475143 ?'''
 
 n = 600851475143
+
+
 def largest_prime_factor(n):
     n_copy = n          # copy of the initial number
     p = None            # initialize largest prime to None
@@ -16,4 +18,5 @@ def largest_prime_factor(n):
                 n /= divisor
         divisor += 2
     return p if p else n_copy     # p = None implies it is prime
-print largest_prime_factor(n)
+print(largest_prime_factor(n))
+

@@ -9,8 +9,8 @@ start = 1901
 end = 2000
 
 count  = 0
-for y in xrange(start, end+1):
-    for m in xrange(1,13):
+for y in range(start, end+1):
+    for m in range(1,13):
         if datetime.date(y,m,1).weekday() == 6:
             count += 1
-print count
+print(count)
