@@ -29,5 +29,5 @@ amicable_list = []
 for n in range(2,10000):
     if is_amicable(n):
         s += n
-        amicable_list.append(n)
+        #amicable_list.append(n)
 print(s)

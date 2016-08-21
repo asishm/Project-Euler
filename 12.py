@@ -37,7 +37,7 @@ def get_updated_divisors(a,b):
     d[2] -= 1
     return reduce(lambda x,y: x*y, (v+1 for v in d.values()))
 
-#s = time.time()
+s = time.time()
 
 def get_triangle(divisor_limit):
     i = 2
@@ -51,5 +51,5 @@ def get_triangle(divisor_limit):
         triangle += i
     return triangle
 
-print(get_triangle(500))
-#print time.time()-s
+get_triangle(500)
+print(time.time()-s)

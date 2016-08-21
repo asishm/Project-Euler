@@ -9,9 +9,10 @@ import os.path
 import functools
 
 def p22():
-
+    names = []
     with open(os.path.join(os.path.abspath(''),'files\p022_names.txt'),'r') as f:
-        names = f.read().split()
+        for line in f:
+            names.extend(k.strip('"') for k in line.split(','))
 
     names.sort()
 

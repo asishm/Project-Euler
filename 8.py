@@ -27,7 +27,8 @@ Find the thirteen adjacent digits in the 1000-digit number that have the greates
 product. What is the value of this product?'''
 
 # Linear approach
-
+import time
+start = time.time()
 p_max = 1
 
 N = ''.join('''73167176531330624919225119674426574742355349194934
@@ -55,3 +56,4 @@ for c in range(len(N)-13):
     p = functools.reduce(lambda x,y : int(x)*int(y), N[c:c+13])
     if p > p_max: p_max = p
 print(p_max)
+print(time.time() - start)
